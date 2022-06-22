@@ -1,0 +1,96 @@
+.respirators {
+  padding-top: 80px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/respirators-bg.png");
+
+  @include mobile-l {
+    padding-top: 30px;
+  }
+
+  &__top,
+  &__middle {
+    @include flex-sb;
+
+    margin-bottom: 80px;
+
+    @include desktop {
+      flex-wrap: wrap;
+    }
+
+    @include mobile-l {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__image-top {
+    width: 100%;
+    max-width: 570px;
+    max-height: 616px;
+
+    @include desktop {
+      margin-right: 10px;
+    }
+
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 20px;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  &__image-middle {
+    width: 100%;
+    max-width: 570px;
+    max-height: 616px;
+
+    @include tablet {
+      border-radius: 8px;
+      max-width: 100%;
+    }
+  }
+
+  &__descr-inner {
+    width: 100%;
+    max-width: 523px;
+
+    @include tablet {
+      max-width: unset;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 26px;
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--color-text-dark);
+
+    @include mobile-s {
+      font-size: 38px;
+    }
+  }
+
+  &__text-one,
+  &__text-two {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__text-two {
+    @include macbook {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text-bold {
+    font-weight: 700;
+  }
+}

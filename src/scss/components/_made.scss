@@ -1,0 +1,305 @@
+.made {
+  &__bottom {
+    @include flex-sb;
+
+    margin-bottom: 80px;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    @include mobile-l {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__bottom-left {
+    position: relative;
+  }
+
+  &__bottom-img {
+    width: 100%;
+    max-width: 570px;
+    max-height: 616px;
+
+    @include tablet {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 5px;
+      border-radius: 8px;
+    }
+  }
+
+  &__left-text {
+    position: absolute;
+    margin: 0;
+    padding: 60px 30px 80px;
+    bottom: 9px;
+    right: 0;
+    width: 100%;
+    max-width: 285px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+
+    @include tablet {
+      position: relative;
+      padding: 40px 10px;
+      margin-bottom: 5px;
+      bottom: unset;
+      right: unset;
+      max-width: unset;
+      font-size: 24px;
+      border-radius: 8px;
+    }
+  }
+
+  &__bottom-right {
+    width: 100%;
+    max-width: 570px;
+
+    @include tablet {
+      max-width: unset;
+    }
+  }
+
+  &__right-top {
+    @include flex;
+  }
+
+  &__text-left {
+    margin: 0;
+    padding: 80px 30px 132px;
+    width: 100%;
+    max-width: 285px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-text);
+
+    @include tablet {
+      padding: 40px 20px;
+      border: 2px solid var(--color-border-line);
+      border-radius: 8px 0 0 0;
+      max-width: unset;
+      font-size: 20px;
+    }
+
+    @include mobile-m {
+      padding: 20px 10px;
+      font-size: 16px;
+    }
+  }
+
+  &__text-right {
+    margin: 0;
+    padding: 80px 30px 132px;
+    border-radius: 0 20px 0 0;
+    width: 100%;
+    max-width: 285px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+
+    @include tablet {
+      padding: 40px 20px;
+      border-radius: 0 8px 0 0;
+      max-width: unset;
+      font-size: 20px;
+    }
+
+    @include mobile-m {
+      padding: 20px 10px;
+      font-size: 16px;
+    }
+  }
+
+  &__right-bottom {
+    padding: 41px 40px 41px 38px;
+    background: var(--color-orange);
+    border-radius: 0 0 20px 0;
+
+    @include desktop {
+      border-radius: 0 0 8px 8px;
+    }
+
+    @include mobile-m {
+      padding: 20px 10px;
+    }
+  }
+
+  &__bottom-subtitle {
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 2.5;
+    color: var(--color-text-dark);
+  }
+
+  &__bottom-text {
+    margin: 0;
+    margin-bottom: 28px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-black);
+  }
+
+  &__bottom-info {
+    @include flex;
+
+    align-items: center;
+
+    @include mobile-m {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  &__link-btn {
+    margin-right: 40px;
+    padding: 7px 18px;
+    font-family: 'Rubik';
+    border: 1px solid var(--color-blue);
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2.1;
+    white-space: nowrap;
+    color: var(--color-blue);
+    transition: background-color 0.5s ease-in-out,
+      color 0.3s ease-in-out;
+
+    &:hover {
+      padding: 7px 18px;
+      color: var(--color-white);
+      background-color: var(--color-blue);
+    }
+
+    @include mobile-m {
+      margin-right: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bottom-phone-inner {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    border-left: 1px solid var(--color-white);
+    background-repeat: no-repeat;
+    background-size: 46px 46px;
+    background-position: 40px 0;
+
+    @include mobile-s {
+      padding-left: 80px;
+    }
+
+    &--icon {
+      background-image: url("../img/respirators-phone-icon.svg");
+    }
+
+    @include mobile-m {
+      border: transparent;
+      background-position: 10px 0;
+    }
+
+
+  }
+
+  &__phone-text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--color-blue);
+  }
+
+  &__phone-link {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--color-black);
+  }
+
+  &__lab-inner {
+    @include flex-sb;
+
+    padding-bottom: 80px;
+    align-items: center;
+    width: 100%;
+    max-width: 894px;
+
+    @include mobile-l {
+      padding-bottom: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.6;
+
+    @include mobile-l {
+      font-size: 20px;
+    }
+  }
+
+  &__line {
+    position: relative;
+    left: 0;
+    top: 13px;
+    width: 147px;
+    height: 1px;
+    border-bottom: 1px solid var(--color-orange);
+
+    @include macbook {
+      width: 1px;
+    }
+
+    @include mobile-l {
+      display: none;
+    }
+  }
+
+  &__lab-left {
+    @include flex-sb;
+
+    width: 100%;
+    max-width: 310px;
+
+    @include mobile-l {
+      margin-bottom: 20px;
+      max-width: unset;
+      justify-content: center;
+    }
+
+    @include mobile-m {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__lab-right {
+    @include flex-sb;
+
+    width: 100%;
+    max-width: 500px;
+
+    @include mobile-m {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__certification-image {
+
+    @include mobile-m {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

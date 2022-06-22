@@ -1,0 +1,326 @@
+.header {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 53px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-image: url("../img/header-bg.jpg");
+
+  @include mobile-l {
+    padding-bottom: 30px;
+  }
+
+  &__inner-container {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 1140px;
+  }
+
+  &__nav {
+    @include flex-sb;
+
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 1140px;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-top: 10px;
+
+    @include macbook {
+      margin-top: 5px;
+    }
+  }
+
+  &__list {
+    @include flex;
+
+    width: 100%;
+    max-width: 611px;
+    z-index: 999;
+
+    @include macbook {
+      font-size: 32px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      background-color: var(--color-blue);
+      padding-top: 50px;
+      z-index: 10;
+      transition: 0.4s;
+      transform: translateY(-200%);
+      max-width: unset;
+    }
+
+    @include macbook {
+      font-size: 22px;
+    }
+
+    @include mobile-l {
+      font-size: 28px;
+    }
+
+    @include mobile-s {
+      font-size: 28px;
+    }
+  }
+
+  &__list-item {
+    &:not(:last-child) {
+      margin-right: 45px;
+
+      @include macbook {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__item-link {
+    color: var(--color-text);
+    transition: color 0.4s ease-in-out;
+
+    &:hover {
+      color: var(--color-text-dark);
+    }
+
+    &--other-color {
+      color: var(--color-text-dark);
+    }
+
+    @include macbook {
+      color: var(--color-white);
+    }
+  }
+
+  &__btn-link {
+    padding: 16px 25px 15px 24px;
+    white-space: nowrap;
+    border-radius: 8px;
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2.1;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    transition: background-color 0.7s ease-in-out, color 0.6s ease-in-out;
+
+    &:hover {
+      padding: 15px 24px 14px 23px;
+      border: 1px solid var(--color-blue);
+      color: var(--color-blue);
+      background-color: var(--color-white);
+    }
+
+    @include macbook {
+      color: var(--color-blue);
+      background-color: var(--color-white);
+    }
+  }
+
+  &__inner-hero {
+    @include flex-sb;
+
+    padding-top: 80px;
+    padding-bottom: 72px;
+    align-items: center;
+
+    @include macbook {
+      flex-wrap: wrap;
+    }
+
+    @include mobile-l {
+      padding-top: 40px;
+      padding-bottom: 50px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include mobile-s {
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__left-side {
+    width: 100%;
+    max-width: 555px;
+
+    @include macbook {
+      margin-bottom: 60px;
+      max-width: unset;
+    }
+  }
+
+  &__model-name {
+    display: block;
+    margin-bottom: 30px;
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2.1;
+    color: var(--color-orange);
+
+    @include mobile-l {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.1;
+    color: var(--color-text-dark);
+
+    @include mobile-l {
+      margin-bottom: 20px;
+    }
+
+    @include mobile-m {
+      font-size: 52px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 54px;
+    line-height: 1.5;
+
+    @include macbook {
+      margin-right: 10px;
+    }
+
+    @include mobile-l {
+      margin-right: 0;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__btns {
+    position: relative;
+    top: 8px;
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2.1;
+    white-space: nowrap;
+  }
+
+  &__shop {
+    border-radius: 8px;
+    margin-right: 20px;
+    padding: 15px 24px;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    box-shadow: 0px 10px 15px rgba(27, 95, 193, 0.19);
+    transition: background-color 0.7s ease-in-out,
+      color 0.6s ease-in-out;
+
+    &:hover {
+      padding: 14px 23px 14px 23px;
+      border: 1px solid var(--color-blue);
+      color: var(--color-blue);
+      background-color: var(--color-white);
+    }
+  }
+
+  &__learn {
+    border: 1px solid var(--color-orange);
+    border-radius: 8px;
+    padding: 14px 23px;
+    color: var(--color-orange);
+    background-color: var(--color-white);
+    transition: background-color 0.7s ease-in-out,
+      color 0.6s ease-in-out;
+
+    &:hover {
+      padding: 14px 23px 14px 23px;
+      color: var(--color-white);
+      background-color: var(--color-orange);
+    }
+  }
+
+  &__img {
+    @include mobile-l {
+      display: block;
+      margin: 0 auto;
+      max-height: 600px;
+    }
+  }
+
+  &__benefits-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 31px;
+
+    @include macbook {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-m {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+  }
+
+  &__benefits-item {
+    padding-left: 60px;
+    width: 100%;
+    max-width: 270px;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+
+    &--shipping {
+      background-image: url("../img/header-shipping-icon.svg");
+    }
+
+    &--inspection {
+      background-image: url("../img/header-inspection-icon.svg");
+    }
+
+    &--support {
+      background-image: url("../img/header-support-icon.svg");
+    }
+
+    &--secure {
+      background-image: url("../img/header-secure-icon.svg");
+    }
+
+    @include macbook {
+      max-width: unset;
+    }
+  }
+
+  &__benefits-subtitle {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--color-text-dark);
+
+    @include macbook {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__benefits-descr {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
